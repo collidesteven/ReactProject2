@@ -7,6 +7,7 @@ import Profile from './components/profile';
 import Posts from './components/posts';
 import PostItem from './components/postItem';
 import NotFound from './components/404';
+import Conditional from './components/conditional';
 
 const App = () =>(
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () =>(
       <NavLink to="/" exact activeStyle={{color:'red'}} activeClassName="selected">Home</NavLink><br/>
       <NavLink to="/posts" exact activeStyle={{color:'red'}}>Posts</NavLink><br/>
       <NavLink to="/profile" exact activeStyle={{color:'red'}}>Profile</NavLink><br/>
+      <NavLink to="/conditional" exact activeStyle={{color:'red'}}>Conditional</NavLink><br/>
     </header>
 
     <br/><br/>
@@ -22,8 +24,9 @@ const App = () =>(
     <Route path="/" exact component={Home}/>
     <Route path="/posts" exact component={Posts}/>
     <Route path="/profile" exact component={Profile}/>
+    <Route path="/conditional" exact component={Conditional}/>
     <Route path="/posts/:id" exact component={PostItem}/>
-    <Route component={NotFound}/> 
+    <Route component={NotFound}/>
 
     <footer>Footer</footer>
   </BrowserRouter>
